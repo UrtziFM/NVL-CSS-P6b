@@ -1,0 +1,46 @@
+html {
+    background: radial-gradient(circle,SkyBlue,SkyBlue 50%,LightCyan 50%,SkyBlue);
+    background-size: 8px 8px;
+    box-sizing: border-box;
+    background-color: gray; 
+}
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+body {
+    background-color: darkgray;
+    color: #111111;
+    font-family: 'Lobster', cursive;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1024px;
+    min-width: 256px;
+    padding-top: 8px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+/*Para definir mejor el elemento div vamos a utilizar ademas del tamaño de los diferentes componentes, el color para poder visualizarlo mejor*/
+
+div {
+    margin: 10px 10px 10px 10px;
+    background-color: grey;
+    border-bottom: 16px;
+    border-left: 16px solid #111111;
+    border-top: 16px;
+    border-right: 16px solid #111111;
+    padding: 32px 32px 32px 32px;
+    font-stretch: expanded;
+}
+
+/*Todos los p hijos directos de un div deberán tener un borde de 2px, sólido y de color #fabada
+Todos los p que sean primer elemento del div deberán tener una clase “importante”.
+Sólos p que estén al lado de estos p con clase importante tendrán su color de texto a rojo*/
+
+div p {
+    border: 2px solid #fabada
+}
+div > p.importante {
+    color: blue;
+}
+p.importante ~ p {
+    color: red;
+}
